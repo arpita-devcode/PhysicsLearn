@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Learning Hub</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">Physics<span>Hub</span></div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#lesson">Lessons</a>
+            <a href="#calculator">Calculator</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="tag">LEARN PHYSICS SIMPLY</p>
+            <h1>Understand Physics.<br><span>Explore the Universe.</span></h1>
+            <p>
+                Learn important physics concepts, understand formulas,
+                and practise calculations in one place.
+            </p>
+            <a href="#lesson" class="btn">Start Learning</a>
+        </div>
+    </section>
+
+    <main class="container">
+
+        <section id="lesson" class="lesson">
+            <p class="tag">LESSON 01</p>
+            <h2>Ohm's Law</h2>
+
+            <p>
+                Ohm's Law describes the relationship between voltage,
+                current, and resistance in an electrical circuit.
+            </p>
+
+            <div class="formula">
+                V = I × R
+            </div>
+
+            <div class="concept-grid">
+                <article class="concept">
+                    <h3>Voltage (V)</h3>
+                    <p>The electrical potential difference, measured in volts.</p>
+                </article>
+
+                <article class="concept">
+                    <h3>Current (I)</h3>
+                    <p>The flow of electric charge, measured in amperes.</p>
+                </article>
+
+                <article class="concept">
+                    <h3>Resistance (R)</h3>
+                    <p>The opposition to current flow, measured in ohms.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="calculator" class="calculator">
+            <p class="tag">PRACTISE</p>
+            <h2>Electrical Power Calculator</h2>
+
+            <p>
+                Enter voltage and current to calculate electrical power.
+            </p>
+
+            <div class="formula">
+                P = V × I
+            </div>
+
+            <form action="/calculate" method="POST">
+                <label for="voltage">Voltage (Volts)</label>
+                <input
+                    type="number"
+                    id="voltage"
+                    name="voltage"
+                    min="0"
+                    step="any"
+                    placeholder="e.g. 12"
+                    required>
+
+                <label for="current">Current (Amperes)</label>
+                <input
+                    type="number"
+                    id="current"
+                    name="current"
+                    min="0"
+                    step="any"
+                    placeholder="e.g. 2"
+                    required>
+
+                <button type="submit">Calculate Power</button>
+            </form>
+
+            <p class="note">
+                The Java backend processes your inputs and returns the result.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>PhysicsHub | Learn • Explore • Understand</p>
+        <p>Educational project built with HTML, CSS and Core Java.</p>
+    </footer>
+
+</body>
+</html>

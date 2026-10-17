@@ -1,0 +1,244 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f8fc;
+    color: #243047;
+    line-height: 1.7;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #ffffff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #183b70;
+}
+
+.logo span {
+    color: #4385e8;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #243047;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #4385e8;
+}
+
+.hero {
+    min-height: 390px;
+    display: flex;
+    align-items: center;
+    padding: 65px 8%;
+    background: linear-gradient(120deg, #e0edff, #f4f8ff);
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.tag {
+    color: #4385e8;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.25;
+    margin-bottom: 18px;
+    color: #183b70;
+}
+
+.hero h1 span {
+    color: #4385e8;
+}
+
+.hero-content > p:not(.tag) {
+    margin-bottom: 28px;
+    color: #56647a;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 8px;
+    background: #3678dc;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #245db3;
+}
+
+.container {
+    width: 84%;
+    max-width: 1100px;
+    margin: 55px auto;
+}
+
+.lesson,
+.calculator {
+    background: white;
+    padding: 32px;
+    border-radius: 15px;
+    margin-bottom: 35px;
+    box-shadow: 0 5px 22px rgba(29, 53, 87, 0.06);
+}
+
+h2 {
+    color: #183b70;
+    font-size: 29px;
+    margin-bottom: 12px;
+}
+
+.formula {
+    background: #eaf2ff;
+    color: #245db3;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 22px;
+    border-radius: 10px;
+    margin: 25px 0;
+}
+
+.concept-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.concept {
+    padding: 22px;
+    border: 1px solid #e4ebf5;
+    border-radius: 10px;
+    background: #fbfdff;
+}
+
+.concept h3 {
+    color: #3678dc;
+    margin-bottom: 8px;
+}
+
+.concept p {
+    color: #657187;
+    font-size: 14px;
+}
+
+.calculator form {
+    max-width: 500px;
+    margin: 25px auto 0;
+}
+
+.calculator label {
+    display: block;
+    font-weight: bold;
+    margin: 17px 0 7px;
+}
+
+.calculator input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd6e5;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.calculator input:focus {
+    border-color: #4385e8;
+    box-shadow: 0 0 0 3px #e0edff;
+}
+
+.calculator button {
+    width: 100%;
+    margin-top: 23px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #3678dc;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.calculator button:hover {
+    background: #245db3;
+}
+
+.note {
+    margin-top: 20px;
+    text-align: center;
+    color: #657187;
+    font-size: 13px;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #183b70;
+    color: white;
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    .header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 50px 7%;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .lesson,
+    .calculator {
+        padding: 22px;
+    }
+
+    .concept-grid {
+        grid-template-columns: 1fr;
+    }
+}
